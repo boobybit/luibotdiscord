@@ -160,13 +160,6 @@ async def serverinfo(ctx, user: discord.Member):
     embed.add_field(name="Joined", value=user.joined_at)
     embed.add_field(name='Dont Abuse',value = 'Dont Abuse This Command Because This Command is not stable', inline= False)
     
-@client.command(pass_context=True)
-async def ping(ctx):
-    t = await client.say('Pong!')
-    ms = (t.timestamp-ctx.message.timestamp).total_seconds() * 1000
-    await client.edit_message(t, new_content='My heart is {}ms,Do %help for any commands'.format(int(ms)))
-    embed.set_thumbnail(url=user.avatar_url)
-    await client.say(embed=embed)
 
 
 client.loop.create_task(change_status())
