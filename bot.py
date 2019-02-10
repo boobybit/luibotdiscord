@@ -50,7 +50,7 @@ async def help(ctx):
     author = ctx.message.author
     embed = discord.Embed(Colour = discord.Colour.orange())
     embed.set_author(name = 'Help Commands')
-    embed.add_field(name ='^say', value ='Returns what the user says.', inline=False)
+    embed.add_field(name ='%say', value ='Returns what the user says.', inline=False)
     embed.add_field(name ='%clear', value ='Deletes certain amount of messages, default amount is 10', inline=False)
     embed.add_field(name ='%join', value ='The bot joins the current voice channel, the user must be in a voice channel to use this comand', inline=False)
     embed.add_field(name ='%leave', value ='The bot leaves the current voice channel.', inline=False)
@@ -81,10 +81,10 @@ async def join(ctx):
         colour = discord.Colour.blue()
     )
 
-    embed.add_field(name = '^play', value = 'play youtube audio with url', inline = False)
-    embed.add_field(name = '^pause', value = 'pauses audio', inline = False)
-    embed.add_field(name = '^resume', value = 'resumes audio', inline = False)
-    embed.add_field(name = '^leave', value = 'leave voice channel', inline = False)
+    embed.add_field(name = '%play', value = 'play youtube audio with url', inline = False)
+    embed.add_field(name = '%pause', value = 'pauses audio', inline = False)
+    embed.add_field(name = '%resume', value = 'resumes audio', inline = False)
+    embed.add_field(name = '%leave', value = 'leave voice channel', inline = False)
 
     await client.say(embed=embed)
     await client.join_voice_channel(channel)
@@ -140,6 +140,11 @@ async def unban(ctx, userName: discord.User):
     """Unban A User from server"""
     await client.kick(userName)
     await client.say("__**Successfully User Has Been Unbanned**__")
+ 
+@client.command(pass_context=True)
+@commands.has_permissions(administrator_members=True)
+async def warn(ctx, target:discord.member):
+    await client.send_messages(target, 'Warning!!!')
 
 @client.command()
 async def say(*args):
