@@ -12,7 +12,7 @@ my_token = 'NTQyNzIxMzQ1NTU4MDIwMDk2.Dz0vUA.SPpd29ZdezJD9BpUmDPHfl0wWlI'
 client = commands.Bot(command_prefix = '%')
 
 client.remove_command('help')
-status = ['%help for commands', 'https://elsonbot.weebly.com', "SUN ELS Bot"]
+status = ['%help for commands', 'https://sunels.weebly.com/', "Annonymous [FM]"]
 
 players = {}
 
