@@ -145,6 +145,14 @@ async def unban(ctx, userName: discord.User):
 @commands.has_permissions(administrator_members=True)
 async def warn(ctx, target:discord.member):
     await client.send_messages(target, 'Warning!!!')
+ 
+@client.command(pass_context = True)
+async def findworld(ctx, type):
+    await client.say('https://growtopiagame.com/worlds/'f'{type}.png')
+
+@client.command(pass_context = True)
+async def nuke(ctx, type):
+    await client.say('>> 'f'{type} was nuked from orbit , it the only way to be sure . play nice everybody!')
 
 @client.command()
 async def say(*args):
