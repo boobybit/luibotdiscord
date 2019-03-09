@@ -154,6 +154,10 @@ async def findworld(ctx, type):
 async def nuke(ctx, type):
     await client.say('>> 'f'{type} was nuked from orbit , it the only way to be sure . play nice everybody!')
 
+@client.command(pass_context = True)
+async def fakeban(ctx, type):
+    await client.say('The Ancients Ones Have BANNED 'f'{type} (Rules to see the /rules)')
+
 @client.command()
 async def say(*args):
         output = ''
