@@ -7,12 +7,12 @@ from itertools import cycle
 import time
 import youtube_dl
 
-my_token = 'NTQyNzIxMzQ1NTU4MDIwMDk2.Dz0vUA.SPpd29ZdezJD9BpUmDPHfl0wWlI'
+my_token = 'NTQyNzIxMzQ1NTU4MDIwMDk2.D3ty1A.P94X3iVWgm9NAq2ENVEFEtX6-gY'
 
 client = commands.Bot(command_prefix = '%')
 
 client.remove_command('help')
-status = ['%help for commands', 'https://sunels.weebly.com/', "Annonymous [FM]"]
+status = ['%help for commands', 'https://sunels.weebly.com/', "With WLAS"]
 
 players = {}
 
@@ -23,7 +23,7 @@ async def change_status():
 
     while not client.is_closed:
         current_status = next(msgs)
-        await client.change_presence(game=discord.Game(name =current_status))
+        await client.change_presence(game=discord.Game(name =current_status, type=1))
         await asyncio.sleep(10)
 
 @client.event
