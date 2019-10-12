@@ -2,25 +2,18 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-TOKEN = "user token"
+TOKEN = "NjI5MTU1OTg3NDIwMzQ4NDE2.XaGwhQ.zicmivcccJwafNV7cB6p2TSCO8o"
 BOT_PREFIX = ("&")
 bot = commands.Bot(command_prefix=BOT_PREFIX, description='Hi')
 
 @bot.command(pass_context=True)
-async def userping(ctx, message):
+async def userping(ctx):
     for members in bot.get_all_members():
         try:
 
-                embed = discord.Embed(title="Epic title", description=message, color=ctx.message.author.top_role.colour)
-                embed.set_footer(text="your daddy▪️ {}".format(ctx.message.created_at)[:-10], icon_url=(ctx.message.author.avatar_url))
-
-                y=0
-                x = y
-                y = x + 1
-                await members.send(embed=embed)
-                await ctx.send("Sended {} messages!".format(y))
+                  await members.send("Ok Recommend for you to join this group: https://discord.gg/GnP4PDA")
         except:
-            continue
+        	print("Error_00x58880: Close This! Bot spammed")
 
 
-bot.run('bot token')
+bot.run('NjI5MTU1OTg3NDIwMzQ4NDE2.XaGwhQ.zicmivcccJwafNV7cB6p2TSCO8o')
