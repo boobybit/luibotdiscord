@@ -16,4 +16,4 @@ async def userping(ctx):
         	print("Error_00x58880: Close This! Bot spammed")
 
 
-bot.run('NjI5MTU1OTg3NDIwMzQ4NDE2.XaHJcA.3wzzXFM3ZEwiTmo4Ln-hKC3WBug')
+bot.run('NjI5MTU1OTg3NDIwMzQ4NDE2.XaHKaQ.Ol_0k3ADAI7cLug1U1_YjOuZ5jo')
